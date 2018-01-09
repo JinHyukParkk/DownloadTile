@@ -21,8 +21,8 @@ func CreateDirIfNotExist(dir string) {
 func ConstructURL(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
-	for i := 1; i <= 6; i++ {
-		for j := 1; j <= 5; j++ {
+	for i := 0; i <= 5; i++ {
+		for j := 0; j <= 4; j++ {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "https://simg.pstatic.net/onetile/get/184/0/1/" + lv + "/" + x_str + "/" + y_str + "/bl_st_bg"
@@ -40,6 +40,8 @@ func MakeJPG(url string, fN string) {
 	defer resp.Body.Close()
 
 	CreateDirIfNotExist("result")
+	os.RemoveAll("./result/*")
+
 	fileName := "./result/" + fN + ".jpg"
 	file, err := os.Create(fileName)
 	if err != nil {
