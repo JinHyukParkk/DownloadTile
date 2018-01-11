@@ -12,6 +12,7 @@
 
 ### 1.2 지도 레벨과 좌표 확인
 naver 지도 tile : [https://navermaps.github.io/maps.js/docs/tutorial-1-maptypes-tilecheck.example.html](https://navermaps.github.io/maps.js/docs/tutorial-1-maptypes-tilecheck.example.html)
+ - 링크와 타일맵의 좌표가 맞지 않아서 피들러로 좌표를 확인해야 할 것 같습니다.!
 
 ## 2. Daum map에서 받아오기
 ### 2.1 사용법
