@@ -8,6 +8,7 @@
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
 # go build .
 # ./DownloadTile naver [Level] [x좌표] [y좌표]
+# 예시 : ./DownloadTile naver 13 6728 5993   // 13레벨 타일맵 북한산 좌표
 ```
 
 ### 1.2 지도 레벨과 좌표 확인
