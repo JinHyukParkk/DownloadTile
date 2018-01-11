@@ -1,7 +1,6 @@
 package downloads
 
 import (
-	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -40,7 +39,6 @@ func ConstructDaumUrl(lv string, x_start string, y_start string) {
 			y_str := strconv.Itoa(y + j)
 			url := "http://map" + strconv.Itoa(num%4) + ".daumcdn.net/map_skyview/L" + lv + "/" + y_str + "/" + x_str + ".jpg?v=160114"
 			fileName := "Daum_" + lv + "_x" + x_str + "_y" + y_str
-			fmt.Println(url)
 			MakeJPG(url, fileName)
 			num++
 		}
