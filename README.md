@@ -1,6 +1,6 @@
 # Naver map, Daum map에서 위성 사진 tile을 받아오는 예제입니다.
 웹 디버깅 툴인 피들러를 이용하여 url 정보를 알아내었고, 테스트 용도로 작성하였습니다. 단순하게 편리함과 golang 공부를 위해 만들었습니다.
-현재 예제는 입력 좌표를 기준으로 오른쪽, 위 방향으로 타일 30개를 받아오는 예제입니다.
+현재 예제는 입력 좌표를 중심으로 타일 30개를 받아오는 예제입니다.
 
 ## 1. Naver map에서 받아오기
 ### 1.1 사용법
@@ -8,7 +8,7 @@
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
 # go build .
 # ./DownloadTile naver [Level] [x좌표] [y좌표]
-# 예시 : ./DownloadTile naver 13 6728 5993   // 13레벨 타일맵 북한산 좌표
+예시) ./DownloadTile naver 13 6728 5993   // 13레벨 타일맵 북한산 좌표
 ```
 
 ### 1.2 지도 레벨과 좌표 확인

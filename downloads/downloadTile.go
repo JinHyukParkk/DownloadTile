@@ -33,8 +33,8 @@ func ConstructDaumUrl(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
 	num := 0
-	for i := 0; i <= 5; i++ {
-		for j := 0; j <= 4; j++ {
+	for i := -2; i <= 3; i++ {
+		for j := -2; j <= 2; j++ {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "http://map" + strconv.Itoa(num%4) + ".daumcdn.net/map_skyview/L" + lv + "/" + y_str + "/" + x_str + ".jpg?v=160114"
