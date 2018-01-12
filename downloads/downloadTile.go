@@ -19,8 +19,8 @@ func CreateDirIfNotExist(dir string) {
 func ConstructNaverUrl(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
-	for i := 0; i <= 5; i++ {
-		for j := 0; j <= 4; j++ {
+	for i := -2; i <= 3; i++ {
+		for j := -2; j <= 2; j++ {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "https://simg.pstatic.net/onetile/get/184/0/1/" + lv + "/" + x_str + "/" + y_str + "/bl_st_bg"
