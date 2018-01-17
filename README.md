@@ -5,24 +5,49 @@
 ## 1. Naver map에서 받아오기
 ### 1.1 사용법
 ```
+# go get github.com/JinHyukParkk/DownloadTile
+```
+#### 1.1.1 함수
+##### ConstructNaverUrl(level string, x string, y string)
+```
+import github.com/JinHyukParkk/DownloadTile
+# downloads.ConstructNaverUrl([Level],[x축],[y축)
+```
+#### 1.1.2 결과
+##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
+### 1.2 실행 방법
+```
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
-# go build .
+# make
 # ./DownloadTile naver [Level] [x좌표] [y좌표]
 예시) ./DownloadTile naver 13 6728 5993   // 13레벨 타일맵 북한산 좌표
 ```
 
-### 1.2 지도 레벨과 좌표 확인
+### 1.3 지도 레벨과 좌표 확인
 naver 지도 tile : [https://navermaps.github.io/maps.js/docs/tutorial-1-maptypes-tilecheck.example.html](https://navermaps.github.io/maps.js/docs/tutorial-1-maptypes-tilecheck.example.html)
  - 링크와 타일맵의 좌표가 맞지 않아서 피들러로 좌표를 확인해야 할 것 같습니다.!
 
 ## 2. Daum map에서 받아오기
 ### 2.1 사용법
 ```
+# go get github.com/JinHyukParkk/DownloadTile
+```
+#### 2.1.1 함수
+##### ConstructDaumUrl(level string, x string, y string)
+```
+import github.com/JinHyukParkk/DownloadTile
+# downloads.ConstructDaumUrl([Level],[x축],[y축)
+```
+#### 2.1.2 결과
+##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
+
+### 2.2 실행 방법 사용법
+```
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
-# go build .
+# make
 # ./DownloadTile daum [Level] [x좌표] [y좌표]
 ```
-### 2.2 지도 레벨과 좌표 확인
+### 2.3 지도 레벨과 좌표 확인
 daum 지도 tile : [http://apis.map.daum.net/web/sample/getTile/](http://apis.map.daum.net/web/sample/getTile/)
 
 개념 참조 : [http://d2.naver.com/helloworld/1174](http://d2.naver.com/helloworld/1174)
