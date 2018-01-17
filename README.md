@@ -7,13 +7,13 @@
 ```
 # go get github.com/JinHyukParkk/DownloadTile
 ```
-* 1.1.1 함수
+* 함수
 ##### ConstructNaverUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
 # downloads.ConstructNaverUrl([Level],[x축],[y축)
 ```
-* 1.1.2 결과
+* 결과
 ##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
 ### 1.2 실행 방법
 ```
@@ -32,13 +32,13 @@ naver 지도 tile : [https://navermaps.github.io/maps.js/docs/tutorial-1-maptype
 ```
 # go get github.com/JinHyukParkk/DownloadTile
 ```
-#### 2.1.1 함수
+* 함수
 ##### ConstructDaumUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
 # downloads.ConstructDaumUrl([Level],[x축],[y축)
 ```
-#### 2.1.2 결과
+* 결과
 ##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
 
 ### 2.2 실행 방법 사용법
