@@ -7,13 +7,13 @@
 ```
 # go get github.com/JinHyukParkk/DownloadTile
 ```
-#### 1.1.1 함수
+* 1.1.1 함수
 ##### ConstructNaverUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
 # downloads.ConstructNaverUrl([Level],[x축],[y축)
 ```
-#### 1.1.2 결과
+* 1.1.2 결과
 ##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
 ### 1.2 실행 방법
 ```
