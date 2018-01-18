@@ -1,4 +1,4 @@
-all: clean build
+all: build
 
 clean:
 	@echo "### Clean result directory"

@@ -65,7 +65,7 @@ Daum Map tile : [http://apis.map.daum.net/web/sample/getTile/](http://apis.map.d
 Vworld Map tile : 피들러를 이용하여 찾아야 합니다.
 
 ## 결과
-'result'라는 directory 안에 해당 Tile 30개가 저장됩니다.
+'tileData'라는 directory 안에 [site]/[Level]/[y좌표]/"y좌표_x좌표.jpg"로 해당 Tile 30개가 저장됩니다.
 
 ### 지도서비스 개념 참조
 개념 참조 : [http://d2.naver.com/helloworld/1174](http://d2.naver.com/helloworld/1174)

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/JinHyukParkk/DownloadTile/createDir"
 	"github.com/JinHyukParkk/DownloadTile/downloads"
 )
 
@@ -17,6 +18,8 @@ func main() {
 	firstD := flag.String("x", "1", "Tile x Location")
 	secondD := flag.String("y", "1", "Tile y Location")
 	flag.Parse()
+
+	createDir.CreateDir(*site, *level, *firstD, *secondD)
 	if *site == "naver" {
 		downloads.ConstructNaverUrl(*level, *firstD, *secondD)
 	} else if *site == "daum" {

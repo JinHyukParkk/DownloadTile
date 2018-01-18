@@ -8,14 +8,6 @@ import (
 	"strconv"
 )
 
-func CreateDirIfNotExist(dir string) {
-	if _, err := os.Stat(dir); os.IsNotExist(err) {
-		err = os.MkdirAll(dir, 0755)
-		if err != nil {
-			panic(err)
-		}
-	}
-}
 func ConstructVWorldUrl(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
@@ -24,8 +16,9 @@ func ConstructVWorldUrl(lv string, x_start string, y_start string) {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "http://xdworld.vworld.kr:8080/XDServer/3DData?Version=2.0.0.0&Request=GetLayer&Layer=tile_mo_HD&Level=" + lv + "&IDX=" + x_str + "&IDY=" + y_str + "&Key=81EC01D7-0327-3868-B85D-67E737396E44"
-			fileName := "Vworld_" + lv + "_x" + x_str + "_y" + y_str
-			MakeJPG(url, fileName)
+			fileName := y_str + "_" + x_str
+			fileDir := "./tileData/vworld/" + lv + "/" + y_str + "/"
+			MakeJPG(url, fileName, fileDir)
 		}
 	}
 }
@@ -37,8 +30,9 @@ func ConstructNaverUrl(lv string, x_start string, y_start string) {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "https://simg.pstatic.net/onetile/get/184/0/1/" + lv + "/" + x_str + "/" + y_str + "/bl_st_bg"
-			fileName := "Naver_" + lv + "_x" + x_str + "_y" + y_str
-			MakeJPG(url, fileName)
+			fileName := y_str + "_" + x_str
+			fileDir := "./tileData/naver/" + lv + "/" + y_str + "/"
+			MakeJPG(url, fileName, fileDir)
 		}
 	}
 }
@@ -51,24 +45,24 @@ func ConstructDaumUrl(lv string, x_start string, y_start string) {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
 			url := "http://map" + strconv.Itoa(num%4) + ".daumcdn.net/map_skyview/L" + lv + "/" + y_str + "/" + x_str + ".jpg?v=160114"
-			fileName := "Daum_" + lv + "_x" + x_str + "_y" + y_str
-			MakeJPG(url, fileName)
+			fileName := y_str + "_" + x_str
+			fileDir := "./tileData/daum/" + lv + "/" + y_str + "/"
+			MakeJPG(url, fileName, fileDir)
 			num++
 		}
 	}
 }
 
-func MakeJPG(url string, fN string) {
+func MakeJPG(url string, fN string, fileDir string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		panic(err)
 	}
 	defer resp.Body.Close()
 
-	CreateDirIfNotExist("result")
-	os.RemoveAll("./result/*")
+	// os.RemoveAll("./result/*")
 
-	fileName := "./result/" + fN + ".jpg"
+	fileName := fileDir + fN + ".jpg"
 	file, err := os.Create(fileName)
 	if err != nil {
 		log.Fatal(err)
