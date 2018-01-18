@@ -15,13 +15,13 @@
 #### 1.2.1 Mac OS X 환경
   1. 'DownloadTile' 이라는 실행 파일 다운
   2. 터미널 실행
-      # ./DownloadTile -site [site] -lv [Level] -x [x축] -y [y축]
+      * ./DownloadTile -site [site] -lv [Level] -x [x축] -y [y축]
   3. result 디렉터리가 생성되고, 그 안에 타일 30개를 받아옴
 
 #### 1.2.2 Window 환경
   1. 'DownloadTile.exe' 이라는 실행 파일 다운
   2. CMD 관리자 모드로 실행
-      # DownloadTile.exe -site [site] -lv [Level] -x [x축] -y [y축]
+      * DownloadTile.exe -site [site] -lv [Level] -x [x축] -y [y축]
   3. result 디렉터리가 생성되고, 그 안에 타일 30개를 받아옴
 
 ### 1.3 Golang 라이브러리로 사용
