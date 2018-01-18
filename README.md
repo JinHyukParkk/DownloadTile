@@ -2,7 +2,7 @@
 웹 디버깅 툴인 피들러를 이용하여 url 정보를 알아내었고, 테스트 용도로 작성하였습니다. 단순하게 편리함과 golang 공부를 위해 만들었습니다.
 현재 예제는 입력 좌표를 중심으로 타일 30개를 받아오는 소스입니다. 필요에 따라 수정해서 사용하시면 될 것 같습니다.
 
-## 1. 사용법
+## 사용법
 ### 1.1 Flag 설명
 * -site : 'naver', 'daum', 'vworld'   .. 받아올 TileMap의 해당 사이트
 * -lv : 해당 Tile의 level
@@ -64,5 +64,8 @@ Daum Map tile : [http://apis.map.daum.net/web/sample/getTile/](http://apis.map.d
 
 Vworld Map tile : 피들러를 이용하여 찾아야 합니다.
 
-#### 지도서비스 개념 참조
+## 결과
+'result'라는 directory 안에 해당 Tile 30개가 저장됩니다.
+
+### 지도서비스 개념 참조
 개념 참조 : [http://d2.naver.com/helloworld/1174](http://d2.naver.com/helloworld/1174)
