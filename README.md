@@ -11,7 +11,7 @@
 ##### ConstructNaverUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
-함수 : downloads.ConstructNaverUrl([Level],[x축],[y축)
+함수 : downloads.ConstructNaverUrl([Level],[x축],[y축])
 ```
 * 결과
 ##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
@@ -19,7 +19,7 @@ import github.com/JinHyukParkk/DownloadTile
 ```
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
 # make
-# ./DownloadTile naver [Level] [x좌표] [y좌표]
+# ./DownloadTile -site naver -lv [Level] -x [x좌표] -y [y좌표]
 예시) ./DownloadTile naver 13 6728 5993   // 13레벨 타일맵 북한산 좌표
 ```
 
@@ -36,7 +36,7 @@ naver 지도 tile : [https://navermaps.github.io/maps.js/docs/tutorial-1-maptype
 ##### ConstructDaumUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
-함수 : downloads.ConstructDaumUrl([Level],[x축],[y축)
+함수 : downloads.ConstructDaumUrl([Level],[x축],[y축])
 ```
 * 결과
 ##### 실행하는 디렉터리에 result란 디렉터리가 생성되고, 그 안에 타일 30개가 저장됩니다.
@@ -45,7 +45,7 @@ import github.com/JinHyukParkk/DownloadTile
 ```
 # git clone https://github.com/JinHyukParkk/DownloadTile.git
 # make
-# ./DownloadTile daum [Level] [x좌표] [y좌표]
+# ./DownloadTile -site daum -lv [Level] -x [x좌표] -y [y좌표]
 ```
 ### 2.3 지도 레벨과 좌표 확인
 daum 지도 tile : [http://apis.map.daum.net/web/sample/getTile/](http://apis.map.daum.net/web/sample/getTile/)
