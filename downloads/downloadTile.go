@@ -16,6 +16,19 @@ func CreateDirIfNotExist(dir string) {
 		}
 	}
 }
+func ConstructVWorldUrl(lv string, x_start string, y_start string) {
+	x, _ := strconv.Atoi(x_start)
+	y, _ := strconv.Atoi(y_start)
+	for i := -2; i <= 3; i++ {
+		for j := -2; j <= 2; j++ {
+			x_str := strconv.Itoa(x + i)
+			y_str := strconv.Itoa(y + j)
+			url := "http://xdworld.vworld.kr:8080/XDServer/3DData?Version=2.0.0.0&Request=GetLayer&Layer=tile_mo_HD&Level=" + lv + "&IDX=" + x_str + "&IDY=" + y_str + "&Key=81EC01D7-0327-3868-B85D-67E737396E44"
+			fileName := "Vworld_" + lv + "_x" + x_str + "_y" + y_str
+			MakeJPG(url, fileName)
+		}
+	}
+}
 func ConstructNaverUrl(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)

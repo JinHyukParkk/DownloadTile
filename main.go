@@ -21,6 +21,8 @@ func main() {
 		downloads.ConstructNaverUrl(*level, *firstD, *secondD)
 	} else if *site == "daum" {
 		downloads.ConstructDaumUrl(*level, *firstD, *secondD)
+	} else if *site == "vworld" {
+		downloads.ConstructVWorldUrl(*level, *firstD, *secondD)
 	}
 
 	t1 := time.Now()
