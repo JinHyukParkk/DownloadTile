@@ -20,13 +20,7 @@ func main() {
 	flag.Parse()
 
 	createDir.CreateDir(*site, *level, *firstD, *secondD)
-	if *site == "naver" {
-		downloads.ConstructNaverUrl(*level, *firstD, *secondD)
-	} else if *site == "daum" {
-		downloads.ConstructDaumUrl(*level, *firstD, *secondD)
-	} else if *site == "vworld" {
-		downloads.ConstructVWorldUrl(*level, *firstD, *secondD)
-	}
+	downloads.DownloadTile(*site, *level, *firstD, *secondD)
 
 	t1 := time.Now()
 	fmt.Println(t1.Sub(t0))

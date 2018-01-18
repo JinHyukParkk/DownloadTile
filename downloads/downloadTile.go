@@ -8,6 +8,15 @@ import (
 	"strconv"
 )
 
+func DownloadTile(site string, lv string, x_start string, y_start string) {
+	if site == "naver" {
+		ConstructNaverUrl(lv, x_start, y_start)
+	} else if site == "daum" {
+		ConstructDaumUrl(lv, x_start, y_start)
+	} else if site == "vworld" {
+		ConstructVWorldUrl(lv, x_start, y_start)
+	}
+}
 func ConstructVWorldUrl(lv string, x_start string, y_start string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
