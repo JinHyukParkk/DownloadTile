@@ -12,7 +12,7 @@
 ### 1.2 실행 방법  
 #### 해당 소스 URL
 [https://github.com/JinHyukParkk/DownloadTile.git](https://github.com/JinHyukParkk/DownloadTile.git)
-#### 1.2.1 Mac OS X 환경
+#### 1.2.1 리눅스, Mac OS X  환경
   1. 'DownloadTile' 이라는 실행 파일 다운
   2. 터미널 실행
       * ./DownloadTile -site [site] -lv [Level] -x [x축] -y [y축]
