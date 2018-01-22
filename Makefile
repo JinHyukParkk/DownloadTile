@@ -1,4 +1,4 @@
-all: build test_vworld2d test_vworld3d test_naver test_daum
+all: build
 
 clean:
 	@echo "### Clean result directory"
@@ -18,8 +18,8 @@ test_vworld2d:
 	@DownloadTile.exe -site vworld -lv 18 -x 224617 -y 101006 -ln "설악산" -type 2d
 
 test_vworld3d:
-	@DownloadTile.exe -site vworld -lv 15 -x 27946 -y 116051 -ln "강남역" -type 3d
-	@DownloadTile.exe -site vworld -lv 15 -x 279463 -y 116076 -ln "여의도" -type 3d
+	@DownloadTile.exe -site vworld -lv 15 -x 279463 -y 116051 -ln "강남역" -type 3d
+	@DownloadTile.exe -site vworld -lv 15 -x 279370 -y 116076 -ln "여의도" -type 3d
 	@DownloadTile.exe -site vworld -lv 13 -x 69854 -y 29049 -ln "북한산" -type 3d
 	@DownloadTile.exe -site vworld -lv 14 -x 141934 -y 57909 -ln "독도" -type 3d
 	@DownloadTile.exe -site vworld -lv 13 -x 70192 -y 29154 -ln "설악산" -type 3d
