@@ -20,10 +20,9 @@ func main() {
 	thirdD := flag.String("ln", "독도", "Location Name")
 	fourD := flag.String("type", "3d", "vworld tile 2d or 3d")
 	flag.Parse()
+
 	createDir.CreateDir(*site, *firstD, *secondD, *thirdD)
-	if *site == "vworld" {
-		downloads.DownloadTile(*site, *level, *firstD, *secondD, *thirdD, *fourD)
-	}
+	downloads.DownloadTile(*site, *level, *firstD, *secondD, *thirdD, *fourD)
 
 	t1 := time.Now()
 	fmt.Println(t1.Sub(t0))
