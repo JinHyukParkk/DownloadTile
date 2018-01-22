@@ -19,8 +19,16 @@ func CreateDir(site string, x_start string, y_start string, ln string) {
 	CreateDirIfNotExist(dirPath)
 	dirPath += "/" + site
 	CreateDirIfNotExist(dirPath)
-	dirPath += "/" + ln
-	CreateDirIfNotExist(dirPath)
+	if site == "vworld" {
+		dp2 := dirPath + "/2D" + ln
+		CreateDirIfNotExist(dp2)
+		dp3 := dirPath + "/3D" + ln
+		CreateDirIfNotExist(dp3)
+	} else {
+		dirPath += "/" + ln
+		CreateDirIfNotExist(dirPath)
+	}
+
 	// y, _ := strconv.Atoi(y_start)
 	// for j := -2; j <= 2; j++ {
 	// 	y_str := strconv.Itoa(y + j)

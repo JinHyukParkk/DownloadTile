@@ -8,16 +8,35 @@ import (
 	"strconv"
 )
 
-func DownloadTile(site string, lv string, x_start string, y_start string, ln string) {
+func DownloadTile(site string, lv string, x_start string, y_start string, ln string, vworldTile string) {
 	if site == "naver" {
 		ConstructNaverUrl(lv, x_start, y_start, ln)
 	} else if site == "daum" {
 		ConstructDaumUrl(lv, x_start, y_start, ln)
 	} else if site == "vworld" {
-		ConstructVWorldUrl(lv, x_start, y_start, ln)
+		if vworldTile == "2d" {
+			Construct2dVWorldUrl(lv, x_start, y_start, ln)
+		} else {
+			Construct3dVWorldUrl(lv, x_start, y_start, ln)
+		}
+
 	}
 }
-func ConstructVWorldUrl(lv string, x_start string, y_start string, ln string) {
+func Construct2dVWorldUrl(lv string, x_start string, y_start string, ln string) {
+	x, _ := strconv.Atoi(x_start)
+	y, _ := strconv.Atoi(y_start)
+	for i := -2; i <= 3; i++ {
+		for j := -2; j <= 2; j++ {
+			x_str := strconv.Itoa(x + i)
+			y_str := strconv.Itoa(y + j)
+			url := "http://xdworld.vworld.kr:8080/2d/Satellite/201710/" + lv + "/" + x_str + "/" + y_str + ".jpeg"
+			fileName := y_str + "_" + x_str
+			fileDir := "./tileData/vworld/2D" + ln + "/"
+			MakeJPG(url, fileName, fileDir)
+		}
+	}
+}
+func Construct3dVWorldUrl(lv string, x_start string, y_start string, ln string) {
 	x, _ := strconv.Atoi(x_start)
 	y, _ := strconv.Atoi(y_start)
 	for i := -2; i <= 3; i++ {
@@ -26,7 +45,7 @@ func ConstructVWorldUrl(lv string, x_start string, y_start string, ln string) {
 			y_str := strconv.Itoa(y + j)
 			url := "http://xdworld.vworld.kr:8080/XDServer/3DData?Version=2.0.0.0&Request=GetLayer&Layer=tile_mo_HD&Level=" + lv + "&IDX=" + x_str + "&IDY=" + y_str + "&Key=81EC01D7-0327-3868-B85D-67E737396E44"
 			fileName := y_str + "_" + x_str
-			fileDir := "./tileData/vworld/" + ln + "/"
+			fileDir := "./tileData/vworld/3D" + ln + "/"
 			MakeJPG(url, fileName, fileDir)
 		}
 	}
