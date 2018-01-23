@@ -44,10 +44,12 @@ import github.com/JinHyukParkk/DownloadTile
 ```
 
 * Vworld 함수
-##### ConstructVWorldUrl(level string, x string, y string)
+##### Construct2DVWorldUrl(level string, x string, y string)
+##### Construct3DVWorldUrl(level string, x string, y string)
 ```
 import github.com/JinHyukParkk/DownloadTile
-함수 : downloads.ConstructVworldUrl([Level],[x축],[y축],[위치])
+함수 : downloads.Construct2DVworldUrl([Level],[x축],[y축],[위치])
+함수 : downloads.Construct3DVworldUrl([Level],[x축],[y축],[위치])
 ```
 
 ### 4. git clone 하여 실행 방법
