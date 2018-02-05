@@ -12,8 +12,6 @@
 * -type : site가 __vwolrd__ 라면 2d or 3d 중 어느 지도에서 가져올 것인지 선택
 
 ## 2. 실행 방법  
-### 해당 소스 URL
-[https://github.com/JinHyukParkk/DownloadTile.git](https://github.com/JinHyukParkk/DownloadTile.git)
 ### 2.1. 리눅스, Mac OS X  환경
   1. 'DownloadTile' 이라는 실행 파일 다운
   2. 터미널 실행
