@@ -8,6 +8,10 @@ import (
 	"strconv"
 )
 
+const (
+	key string = ""
+)
+
 var localName string = "Result"
 
 func DownloadTile(site string, lv string, x_start string, y_start string, ln string, vworldTile string) {
@@ -46,7 +50,7 @@ func Construct3dVWorldUrl(lv string, x_start string, y_start string) {
 		for j := -2; j <= 2; j++ {
 			x_str := strconv.Itoa(x + i)
 			y_str := strconv.Itoa(y + j)
-			url := "http://xdworld.vworld.kr:8080/XDServer/3DData?Version=2.0.0.0&Request=GetLayer&Layer=tile_mo_HD&Level=" + lv + "&IDX=" + x_str + "&IDY=" + y_str + "&Key=81EC01D7-0327-3868-B85D-67E737396E44"
+			url := "http://xdworld.vworld.kr:8080/XDServer/3DData?Version=2.0.0.0&Request=GetLayer&Layer=tile_mo_HD&Level=" + lv + "&IDX=" + x_str + "&IDY=" + y_str + "&Key=" + key
 			fileName := y_str + "_" + x_str
 			fileDir := "./tileData/vworld/3D" + localName + "/"
 			MakeJPG(url, fileName, fileDir)
